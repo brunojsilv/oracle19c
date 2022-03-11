@@ -1,0 +1,18 @@
+version: "3.7"
+services: 
+  
+  orcl19c:
+    build: 
+      context: .
+    environment:
+      ORACLE_PWD: System#1 
+      TZ: America/Sao_Paulo
+      INIT_SGA_SIZE: 1024
+      INIT_PGA_SIZE: 1024
+    volumes: 
+      - ora_data:/opt/oracle/oradata
+    ports: 
+      - "1521:1521"
+
+volumes: 
+  ora_data:

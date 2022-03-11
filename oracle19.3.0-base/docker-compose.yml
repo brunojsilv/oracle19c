@@ -1,0 +1,10 @@
+version: "3.7"
+services: 
+
+  oracle19c:
+    build: 
+      context: .
+      args: 
+        DB_EDITION: ee
+        MEMORY_TARGET: "2G"
+    image: oracle19c:19.3.0
